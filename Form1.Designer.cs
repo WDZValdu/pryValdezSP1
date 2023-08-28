@@ -28,13 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnCrearArc = new System.Windows.Forms.Button();
+            this.btnGrabarArc = new System.Windows.Forms.Button();
+            this.txtDatos = new System.Windows.Forms.TextBox();
+            this.btnLeer = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnCrearArc
+            // 
+            this.btnCrearArc.Location = new System.Drawing.Point(12, 305);
+            this.btnCrearArc.Name = "btnCrearArc";
+            this.btnCrearArc.Size = new System.Drawing.Size(116, 37);
+            this.btnCrearArc.TabIndex = 0;
+            this.btnCrearArc.Text = "Crear Archivo";
+            this.btnCrearArc.UseVisualStyleBackColor = true;
+            this.btnCrearArc.Click += new System.EventHandler(this.btnCrearArc_Click);
+            // 
+            // btnGrabarArc
+            // 
+            this.btnGrabarArc.Location = new System.Drawing.Point(150, 305);
+            this.btnGrabarArc.Name = "btnGrabarArc";
+            this.btnGrabarArc.Size = new System.Drawing.Size(116, 37);
+            this.btnGrabarArc.TabIndex = 1;
+            this.btnGrabarArc.Text = "Grabar Archivo";
+            this.btnGrabarArc.UseVisualStyleBackColor = true;
+            this.btnGrabarArc.Click += new System.EventHandler(this.btnGrabarArc_Click);
+            // 
+            // txtDatos
+            // 
+            this.txtDatos.Location = new System.Drawing.Point(40, 32);
+            this.txtDatos.Multiline = true;
+            this.txtDatos.Name = "txtDatos";
+            this.txtDatos.Size = new System.Drawing.Size(348, 120);
+            this.txtDatos.TabIndex = 2;
+            // 
+            // btnLeer
+            // 
+            this.btnLeer.Location = new System.Drawing.Point(298, 305);
+            this.btnLeer.Name = "btnLeer";
+            this.btnLeer.Size = new System.Drawing.Size(116, 37);
+            this.btnLeer.TabIndex = 3;
+            this.btnLeer.Text = "Leer Archivo";
+            this.btnLeer.UseVisualStyleBackColor = true;
+            this.btnLeer.Click += new System.EventHandler(this.btnLeer_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(426, 354);
+            this.Controls.Add(this.btnLeer);
+            this.Controls.Add(this.txtDatos);
+            this.Controls.Add(this.btnGrabarArc);
+            this.Controls.Add(this.btnCrearArc);
+            this.Name = "Form1";
+            this.Text = "Manejo de Archivos y Carpetas";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnCrearArc;
+        private System.Windows.Forms.Button btnGrabarArc;
+        private System.Windows.Forms.TextBox txtDatos;
+        private System.Windows.Forms.Button btnLeer;
     }
 }
 
