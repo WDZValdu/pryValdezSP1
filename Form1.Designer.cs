@@ -56,7 +56,7 @@
             // 
             // txtDatos
             // 
-            this.txtDatos.Location = new System.Drawing.Point(40, 32);
+            this.txtDatos.Location = new System.Drawing.Point(34, 27);
             this.txtDatos.Multiline = true;
             this.txtDatos.Name = "txtDatos";
             this.txtDatos.Size = new System.Drawing.Size(348, 120);

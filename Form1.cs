@@ -23,7 +23,7 @@ namespace pryValdezSP1
         {
             try
             {
-                StreamWriter swCrearArchivo = new StreamWriter("Mi Archivo", true);
+                StreamWriter swCrearArchivo = new StreamWriter("Mi Archivo", false);
                 MessageBox.Show("Archivo creado");
             }
             catch (Exception)
@@ -58,7 +58,7 @@ namespace pryValdezSP1
 
         private void btnLeer_Click(object sender, EventArgs e)
         {
-            StreamReader srManejoArchivo = new StreamReader("Mi Archivo", true);
+            /*StreamReader srManejoArchivo = new StreamReader("Mi Archivo", true);
 
             while (srManejoArchivo.EndOfStream == false)
             {
@@ -67,8 +67,28 @@ namespace pryValdezSP1
 
             }
             srManejoArchivo.Close();
-            srManejoArchivo.Dispose();
+            srManejoArchivo.Dispose();*/
             
+            try
+            {
+                using (StreamReader srManejoArchivo = new StreamReader("Mi Archivo"))
+                {
+                    string contenido = ""; // Variable para acumular el contenido del archivo
+
+                    while (srManejoArchivo.EndOfStream == false)
+                    {
+                        contenido += srManejoArchivo.ReadLine() + Environment.NewLine;
+                    }
+
+                    txtDatos.Text = contenido; // Mostrar todas las líneas en el cuadro de texto
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Fatal Error");
+                throw;
+            }
+
 
         }
     }
